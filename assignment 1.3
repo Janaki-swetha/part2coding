@@ -1,0 +1,47 @@
+creating student dictionary dynamically
+
+student={}
+n=int(input("enter no: of player:"))
+for i in  range(1,n+1):
+    list=[]
+    sno=int(input("enter student number:"))
+    sname=input("enter student name:")
+    group=input("enter group:")
+    cbranch=input("enter college branch:")
+    pno=int(input("enter phone number:"))
+    list.append(sname)
+    list.append(group)
+    list.append(cbranch)
+    list.append(pno)
+    student[sno]=list
+print(student)
+m=int(input("enter student number:"))
+print('student name:',student[m][0])
+print('student group:',student[m][1])
+print('student college branch :',student[m][2])
+print('student phone number:',student[m][3])
+
+
+
+
+output:
+enter student name:ram
+enter group:bca
+enter college branch:adcelr
+enter phone number:1234567892
+enter student number:2
+enter student name:janu
+enter group:bsc
+enter college branch:adctpg
+enter phone number:4556788934
+enter student number:1
+enter student name:arjun
+enter group:mpcs
+enter college branch:adckkd
+enter phone number:3445221345
+{4: ['ram', 'bca', 'adcelr', 1234567892], 2: ['janu', 'bsc', 'adctpg', 4556788934], 1: ['arjun', 'mpcs', 'adckkd', 3445221345]}
+enter student number:2
+student name: janu
+student group: bsc
+student college branch : adctpg
+student phone number: 4556788934
