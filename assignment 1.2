@@ -1,0 +1,27 @@
+create players dictionary at the time of run time
+
+
+
+player={}
+n=int(input("enter no: of player:"))
+for i in  range(1,n+1):
+    pno=int(input("enter player number:"))
+    pname=input("enter player name:")
+    player[pno]=pname
+print(player)
+m=int(input("enter player number:"))
+print(player[m])
+
+
+
+output:
+enter no: of player:3
+enter player number:6
+enter player name:virat
+enter player number:2
+enter player name:dhoni
+enter player number:1
+enter player name:sachin
+{6: 'virat', 2: 'dhoni', 1: 'sachin'}
+enter player number:1
+sachin
