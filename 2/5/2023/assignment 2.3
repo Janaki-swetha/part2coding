@@ -1,0 +1,34 @@
+'''assignment-2:
+    write a program to find maximum and minumum freequency numbers and
+    print their difference.
+    input:
+        1 2 3 4 5 6 7 1 2 3 4 5 7 5 5 5
+    output:
+        max:5
+        min:6
+    difference:1'''
+L=list(map(int,input().split()))
+d={}
+for i in L:
+    if i not in d:
+        d[i]=1
+    else:
+        d[i]=d[i]+1
+m=list(d.values())
+r=min(m)
+z=max(m)
+for i in d:
+    if d[i]==r:
+        r=i
+        print('min:',i)
+    if d[i]==z:
+        z=i
+        print('max:',i)
+print('difference:',r-z)
+
+
+output:
+1 2 3 4 5 6 7 1 2 3 4 5 7 5 5 5
+max: 5
+min: 6
+difference: 1
