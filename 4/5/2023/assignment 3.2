@@ -1,0 +1,25 @@
+'''assignments2:
+    write a program to print given number is palindrome or not using class
+'''
+class Solution:
+    def palindrome(self,n):
+        x=n
+        t=0
+        while(n>0):
+            r=n%10
+            t=t*10+r
+            n=n//10
+        if t==x:
+            return True
+            
+n=int(input())
+s=Solution()
+if s.palindrome(n):
+    print('palindrome')
+else:
+    print('not a palindrome')
+    
+    
+output:
+12321
+palindrome
