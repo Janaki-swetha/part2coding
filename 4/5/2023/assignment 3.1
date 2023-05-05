@@ -1,0 +1,18 @@
+'''
+assignments1:
+    write a program to print given year is leap year or not using class'''
+class Solution:
+    def leapyear(self,n):
+        if n%4==0 and n%100!=0 or n%400==0:
+           return True
+n=int(input())
+s=Solution()
+if s.leapyear(n):
+    print('leap year')
+else:
+    print('not a leap year')
+    
+    
+output:
+400 
+leap year
