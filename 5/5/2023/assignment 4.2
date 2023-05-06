@@ -1,0 +1,25 @@
+import math
+seive=[]
+sum=0
+n=int(input())
+n=n+1
+for i in range(0,n):
+    seive.append(1)
+x=int(math.sqrt(n))
+for i in range(2,x+1):
+    if seive[i]==1:
+        for j in range(i*i,n,i):
+            seive[j]=0
+for i in range(2,n):
+    
+    if seive[i]==1:
+        sum=sum+i
+        print(i,end=' ')
+print('\nsum:',sum)
+       
+       
+       
+output:
+40
+2 3 5 7 11 13 17 19 23 29 31 37 
+sum: 197
