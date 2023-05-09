@@ -1,0 +1,50 @@
+'''Assignment3:
+Write a program to print prime number count in between ranges(inclusive)
+Input:
+4
+1 8
+2 12
+15 25
+2 5
+Output:
+4
+5
+3
+3
+Explantion:1 to 8(2,3,5,)
+2 to 12(2,3,5,7,11)
+15 to 25(17,19,23)
+2 to 5(2,3,5)
+'''
+import math
+n=1000
+seive=[1]*n
+x=int(math.sqrt(n))
+seive[0]=1
+seive[1]=0
+i=2
+while(i<x):
+    if seive[i]==1:
+        for j in range(i*i,n,i):
+             seive[j]=0
+    i=i+1
+z=int(input())
+s=""
+for i in range(0,z):
+    c=0
+    m,n=input().split()
+    m,n=int(m),int(n)
+    for i in range(m,n+1):
+        if seive[i]==1:
+            c=c+1
+    s=s+str(c)
+print(s)
+
+
+output:
+4
+1 8
+2 12
+15 25
+2 5
+4 5 3 3
