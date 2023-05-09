@@ -1,0 +1,30 @@
+'''Assignments:
+Write a program to print prime number in the given range(exclusive)
+Input:
+4 11
+Output:
+5 6 7 '''
+import math
+n=1000
+seive=[1]*n
+x=int(math.sqrt(n))
+seive[0]=1
+seive[1]=0
+s=""
+i=2
+while(i<x):
+    if seive[i]==1:
+        for j in range(i*i,n,i):
+             seive[j]=0
+    i=i+1
+m,n=input().split()
+m,n=int(m),int(n)
+for i in range(m+1,n):
+    if seive[i]==1:
+        s=s+str(i)+" "
+print(s)
+
+
+output:
+1 100
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
