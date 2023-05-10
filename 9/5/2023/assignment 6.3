@@ -1,0 +1,33 @@
+'''write a program to print sum of all the prime factors of the different
+    numbers
+input:
+    3//no of test cases
+    25
+    8
+    14
+output:
+    25'''
+import math
+n=int(input())
+c=0
+for i in range(0,n):
+    m=int(input())
+    while(m%2==0):
+        c=c+2
+        m=m//2
+    for i in range(3,int(math.sqrt(m))+1,2):
+        while(m%i==0):
+            c=c+i
+            m=m//i
+    if m>2:
+        c=c+m
+print(c)
+
+output:
+3
+25
+8
+14
+
+
+25
