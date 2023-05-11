@@ -1,0 +1,20 @@
+import math
+n=int(input())
+for i in range(0,n):
+    m=int(input())
+    seive=[1]*m
+    seive[0]=0
+    seive[1]=0
+    z=int(math.sqrt(m))
+    for i in range(2,z+1):
+        if seive[i]==1:
+            for j in range(i*i,m,i):
+                seive[j]=0
+    l=[]
+    if m==2:
+        print('1')
+    else:
+        for i in range(0,m):
+            if seive[i]==1:
+               l.append(i)
+        print(len(l))
