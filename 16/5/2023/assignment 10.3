@@ -1,0 +1,11 @@
+class Solution:
+    def maximumSumSubarray (self,K,Arr,N):
+        n=len(Arr)
+        t=[]
+        for i in range(0,n):
+            for j in range(i+1,n):
+                x=Arr[i]+Arr[j]
+                t.append(x)
+        z=max(t)
+        return z
+    
